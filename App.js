@@ -1,4 +1,4 @@
-import { View, FlatList,Text } from "react-native";
+import { View, FlatList,Text,Alert} from "react-native";
 import { myStyle } from "./style/myStyle";
 import Person from "./components/person";
 import AddForm from "./components/AddForm";
@@ -15,7 +15,16 @@ export default function App() {
     })
   }
   const insertData=(name,age)=>{
-    console.log("ค่าที่ส่งมาจาก แบบ form",name,age)
+    if(name){
+      setData((prevData)=>{
+        return[
+          {id:Math.random().toString(),name,age},
+          ...prevData
+        ]
+      })
+    }else{
+      Alert.alert("แจ้งเตือน","กรุณาป้อนชื่อประชากร")
+    }
   }
   return (
     <View style={myStyle.container}>
