@@ -1,6 +1,7 @@
 import { View, FlatList,Text } from "react-native";
 import { myStyle } from "./style/myStyle";
 import Person from "./components/person";
+import AddForm from "./components/AddForm";
 import { useState } from "react";
 export default function App() {
   const [data , setData] = useState([
@@ -24,6 +25,7 @@ export default function App() {
         ListHeaderComponent={<Text style={{alignSelf:"center",fontSize:25,fontWeight:"bold"}}>ข้อมูลประชากร</Text>}
         ListEmptyComponent={<Text style={{alignSelf:"center",fontSize:25}}>No data kub</Text>}
       />
+      <AddForm/>
     </View>
   );
 }

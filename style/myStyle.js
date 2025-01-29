@@ -17,4 +17,11 @@ export const myStyle = StyleSheet.create({
     borderStyle:"dotted",
     borderRadius:10
   },
+  input:{
+    borderBottomColor:"#ddd",
+    borderBottomWidth:1,
+    paddingHorizontal:8,
+    paddingVertical:6,
+    marginBottom:15
+  }
 });
