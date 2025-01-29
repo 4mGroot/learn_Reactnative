@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { myStyle } from "../style/myStyle";
-export default function Person({ item }) {
+export default function Person({ item ,deleteData}) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>deleteData(item.id)}>
       <View style={myStyle.content}>
         <Text style={myStyle.header}>ชื่อ {item.name} , อายุ {item.age} ปี</Text>
       </View>
