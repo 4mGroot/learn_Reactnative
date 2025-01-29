@@ -14,6 +14,9 @@ export default function App() {
       return prevData.filter((item)=>item.id !==id)
     })
   }
+  const insertData=(name,age)=>{
+    console.log("ค่าที่ส่งมาจาก แบบ form",name,age)
+  }
   return (
     <View style={myStyle.container}>
       <FlatList
@@ -25,7 +28,7 @@ export default function App() {
         ListHeaderComponent={<Text style={{alignSelf:"center",fontSize:25,fontWeight:"bold"}}>ข้อมูลประชากร</Text>}
         ListEmptyComponent={<Text style={{alignSelf:"center",fontSize:25}}>No data kub</Text>}
       />
-      <AddForm/>
+      <AddForm insertData={insertData}/>
     </View>
   );
 }
